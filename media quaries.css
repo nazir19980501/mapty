@@ -1,0 +1,39 @@
+@media(max-width:760px) {
+  html {
+    font-size:40%;
+  }
+
+  .sidebar {
+    padding: 2rem 2rem;
+  }
+}
+
+@media(max-width:580px) {
+
+  html {
+    font-size:30%;
+  }
+
+  body {
+    display: block;
+    
+  }
+
+  #map{
+    z-index: 9;
+  }
+
+
+    
+  .sidebar {
+    position: absolute;
+    z-index:10;
+    width: 40rem;
+    transform: translateX(-100%)
+  }
+.toggle-btn {
+  display: block;
+}
+
+ 
+}
