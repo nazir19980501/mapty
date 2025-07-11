@@ -112,10 +112,12 @@ class App {
     this.#mapEvent = mapE;
     form.classList.remove('hidden');
     inputDistance.focus();
+    showSideBar()
   }
 
   _hideForm() {
     form.classList.add('hidden');
+    showSideBar()
   }
 
   _toggleElevationField() {
@@ -291,7 +293,12 @@ let side = 'forward'
 let open = '0'
 const sideBar = document.querySelector('.sidebar')
 const icon = document.querySelector('.icon')
-toggleBtn.addEventListener('click', function(){
+
+
+
+const showSideBar = function(){
+
+  if (document.body.clientWidth > 580) return;
 
   if (side === 'forward') {
     side = 'back'
@@ -305,4 +312,6 @@ toggleBtn.addEventListener('click', function(){
 
   icon.setAttribute('name', `chevron-${side}-outline`)
 
-})
+}
+
+toggleBtn.addEventListener('click', showSideBar)
