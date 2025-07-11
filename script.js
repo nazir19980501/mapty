@@ -265,6 +265,7 @@ class App {
   
     this.#map.setView(workout.coords, 13, {animate: true, pan:{duration:1},
     });
+    showSideBar()
   }
 
     _setLocalStorage() {
